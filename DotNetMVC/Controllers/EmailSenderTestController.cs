@@ -14,7 +14,7 @@ namespace DotNetMVC.Controllers
         [HttpGet]
         public void Get()
         {
-            var message = new Message(new string[] { "anhkhoa3301@gmail.com" }, "Test email", "This is test email, hi !");
+            var message = new Message(new string[] { "nguyenlebinhnam@gmail.com" }, "Test email", "This is test email, hi !");
             _emailSender.SendEmail(message);
         }
     }
