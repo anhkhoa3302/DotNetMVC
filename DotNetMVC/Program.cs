@@ -1,5 +1,6 @@
 using DotNetMVC.Data;
 using EmailService;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using VNPayment;
@@ -48,7 +49,6 @@ else
 }
 
 
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -56,8 +56,6 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
-
-
 
 app.UseEndpoints(endpoints =>
 {

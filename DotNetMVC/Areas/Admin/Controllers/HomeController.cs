@@ -2,6 +2,7 @@
 
 namespace DotNetMVC.Areas.Admin.Controllers
 {
+
     [Area("Admin")]
     public class HomeController : Controller
     {
