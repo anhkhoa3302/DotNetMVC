@@ -1,0 +1,70 @@
+﻿<style>
+    /* increase height of ckeditor*/
+    .ck-editor__editable_inline {
+        min-height: 200px;
+    }
+</style>
+
+<form asp-area="Admin" asp-controller="EmailSender" asp-action="SendEmail" method="post">
+    <table>
+        <tr>
+            <td>Send to:</td>
+            <td>
+                <select>
+                    <option value="All">All</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </td>
+        <tr>
+            <td>Title :</td>
+            <td><input name="title"/></td>
+        </tr>
+        <tr>
+            <td>Description :</td>
+            <td><textarea name="content" id="content"></textarea></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="Submit1" type="submit" value="submit" /></td>
+        </tr>
+    </table>
+</form>
+
+@section Scripts{
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+    <script>
+        $(document).ready(function () {
+            // ckeditor 5 initialization
+            ClassicEditor
+                .create(document.getElementById('content'),{
+                    toolbar:{
+                        items: [
+                            'heading', '|',
+                            'alignment', '|',
+                            'bold', 'italic', 'strikethrough', 'underline', 'subscript', 'superscript', '|',
+                            'link', '|',
+                            'bulletedList', 'numberedList', 'todoList',
+                            '-', // break point
+                            'fontfamily', 'fontsize', 'fontColor', 'fontBackgroundColor', '|',
+                            'code', 'codeBlock', '|',
+                            'insertTable', '|',
+                            'outdent', 'indent', '|',
+                            'uploadImage', 'blockQuote', '|',
+                            'undo', 'redo'
+                        ],
+                        shouldNotGroupWhenFull: true
+                    } 
+                })
+                .then(editor => {
+                    console.log(editor);
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+            
+                
+        });
+        
+    </script>
+}

@@ -15,11 +15,6 @@ namespace DotNetMVC.Controllers
         public void Get()
         {
 
-            var message = new Message(new string[] { "nguyenlebinhnam@gmail.com" }, "Test email", "This is test email, hi !");
-            _emailSender.SendEmail(message);
-
-            //var message = new Message(new string[] { "Nguyenlebinhnam@gmail.com" }, "Test email", "This is test email, hi !");
-            //_emailSender.SendEmail(message);
 
         }
     }

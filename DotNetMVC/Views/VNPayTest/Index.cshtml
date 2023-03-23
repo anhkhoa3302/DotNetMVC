@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "VNPay";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Thanh toán VNPay</h1>
+    <form method="post" asp-action="Pay">
+        <input type="text" id="OrderId" name="OrderId" placeholder="Ma hoa don" value="HD0001"/>
+        <input type="text" id="Amount" name="Amount" placeholder="So tien" value="1000000"/>
+        <button type="submit">Thanh toan</button>
+    </form>
+</div>
