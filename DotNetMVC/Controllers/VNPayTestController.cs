@@ -39,7 +39,8 @@ namespace DotNetMVC.Controllers
             var request = HttpContext.Request;
             var url = request.GetEncodedUrl();
 
-            if(request.Query.Count > 0)
+
+            if (request.Query.Count > 0)
             {
                 var vnpayData = Request.QueryString;
                 return Json(vnpayData);
@@ -47,6 +48,7 @@ namespace DotNetMVC.Controllers
 
 
             return Json("Ok");
+
         }
     }
 }
